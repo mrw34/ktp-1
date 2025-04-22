@@ -1,0 +1,25 @@
+[project]
+name = "ktp-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "en-core-web-sm",
+    "openai-whisper>=20240930",
+    "spacy>=3.8.5",
+    "streamlit>=1.44.1",
+    "watchdog>=6.0.0",
+]
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+
+[dependency-groups]
+dev = [
+    "pyright[nodejs]>=1.1.399",
+    "ruff>=0.11.6",
+]
+
+[tool.ruff]
+line-length = 120
